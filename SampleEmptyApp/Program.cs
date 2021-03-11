@@ -13,8 +13,14 @@ namespace SampleEmptyApp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Helloworldll");
-            /*CreateHostBuilder(args).Build().Run();*/
+            int[] a = new int[7];
+            for (int i = 0; i<a.Length; i++)
+            {
+                Random r = new Random();
+                a[i] = r.Next(1, 10);
+                Console.Write("a["+i+"]="+a[i]);
+            }
+
         }
 
         /* public static IHostBuilder CreateHostBuilder(string[] args) =>
