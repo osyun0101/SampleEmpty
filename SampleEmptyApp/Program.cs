@@ -1,34 +1,24 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace SampleEmptyApp
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            int[] a = new int[7];
-            for (int i = 0; i<a.Length; i++)
-            {
-                Random r = new Random();
-                a[i] = r.Next(1, 10);
-                Console.Write("a["+i+"]="+a[i]);
-            }
-
+            Person2 p = new Person2();
+            //  名前と年齢を設定
+            p.SetAgeAndName("山田太郎", 26);
+            //  年齢の変更
+            p.Age = 32;
+            //  名前の変更（できない）
+            //  p.Name = 36;
+            //  名前と年齢の表示
+            Console.WriteLine("名前：{0}　年齢:{1}", p.Name, p.Age);
         }
-
-        /* public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-        */
     }
 }
