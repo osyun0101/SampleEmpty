@@ -20,6 +20,9 @@ namespace SampleEmptyApp
             //  名前と年齢の表示
             Console.WriteLine("名前：{0}　年齢:{1}", p.Name, p.Age);
             Console.Write("neko");
+            int i;
+            i = 23;
+            Console.WriteLine(i);
         }
     }
 }
