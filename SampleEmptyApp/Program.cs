@@ -4,25 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleEmptyApp
+namespace SampleEx101
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Person2 p = new Person2();
-            //  名前と年齢を設定
-            p.SetAgeAndName("山田太郎", 26);
-            //  年齢の変更
-            p.Age = 32;
-            //  名前の変更（できない）
-            //  p.Name = 36;
-            //  名前と年齢の表示
-            Console.WriteLine("名前：{0}　年齢:{1}", p.Name, p.Age);
-            Console.Write("neko");
-            int i;
-            i = 23;
-            Console.WriteLine(i);
+            Person p1, p2;
+            p1 = new Person();  //  引数なしのコンストラクタ
+            p2 = new Person("太田隆", 29); //  引数ありのコンストラクタ
+            p1.Name = "斉藤花子";
+            p1.Age = 18;
+            p1.ShowAgeAndName();
+            p2.ShowAgeAndName();
         }
     }
 }
