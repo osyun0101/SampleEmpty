@@ -8,26 +8,17 @@ namespace SampleEmptyApp
 {
     class Program
     {
-        private static int snum = 100;
-        //  インスタンスフィールド
-        public int inum = 200;
-        //  staticなメソッド
-        public static void foo()
-        {
-            Console.WriteLine("fooメソッド（staticメソッド)");
-        }
-        public void bar()
-        {
-            Console.WriteLine("barメソッド（インスタンスメソッド）");
-        }
         static void Main(string[] args)
         {
-            //  インスタンスの生成
-            Program p = new Program();
-            Console.WriteLine("pのインスタンスフィールド:inum = {0}", p.inum);
-            Console.WriteLine("Programのクラスフィールド:snum = {0}", snum);
-            foo();
-            p.bar();
+            Dummy d = new Dummy();
+            IFuncs1 i1 = (IFuncs1)d;
+            IFuncs2 i2 = (IFuncs2)d;
+            //  i1のメソッドを利用
+            i1.Func1();
+            i1.Func2();
+            //  i2のメソッドを利用
+            i2.Func2();
+            i2.Func3();
         }
     }
 }
