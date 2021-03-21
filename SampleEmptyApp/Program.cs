@@ -20,6 +20,7 @@ namespace SampleEmptyApp
             for (int i = 0; i < a.Count; i++)
             {
                 Console.WriteLine("a[{0}]={1} ", i, a[i]);
+                Console.WriteLine(i)
             }
         }
     }
