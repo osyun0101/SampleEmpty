@@ -10,17 +10,39 @@ namespace SampleEmptyApp
     {
         static void Main(string[] args)
         {
-            List<int> a = new List<int>();
-            //  値を順に挿入
-            a.Add(3);
-            a.Add(2);
-            a.Add(1);
-            //  1番目に4を挿入
-            a.Insert(1, 4);
-            for (int i = 0; i < a.Count; i++)
+            Random r = new Random();
+            List<int> n = new List<int>();
+            List<int> n2 = new List<int>();
+            while (true)
             {
-                Console.WriteLine("a[{0}]={1} ", i, a[i]);
-                Console.WriteLine(i)
+                int i = r.Next(0, 11);
+                if (i % 2 == 0)
+                {
+                    n2.Add(i);
+                }
+                else
+                {
+                    n.Add(i);
+                }
+                Console.WriteLine("0～10の値を出力:{0}", i);
+                if (i == 0)
+                {
+                    Console.Write("偶数:");
+                    int index = 1;
+                    foreach(int s in n2)
+                    {
+                        if (index == n2.Count)
+                        {
+                            Console.WriteLine(s);
+                        }
+                        else
+                        {
+                            Console.Write(s);
+                        }
+                        
+                    }
+                    break;
+                }
             }
         }
     }
