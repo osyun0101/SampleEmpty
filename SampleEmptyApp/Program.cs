@@ -6,43 +6,60 @@ using System.Threading.Tasks;
 
 namespace SampleEmptyApp
 {
+    delegate void Delegatefunc(int num);
+    class Showcharas
+    {
+        //  星を表示
+        public void ShowStars(int num)
+        {
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write("☆");
+            }
+            Console.WriteLine();
+        }
+        //  資格を表示
+        public void ShowBoxes(int num)
+        {
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write("■");
+            }
+            Console.WriteLine();
+        }
+        //  +を表示
+        public void ShowPlus(int num)
+        {
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write("＋");
+            }
+            Console.WriteLine();
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
-            List<int> n = new List<int>();
-            List<int> n2 = new List<int>();
-            while (true)
+            Showcharas s = new Showcharas();
+            Delegatefunc f = new Delegatefunc(s.ShowStars);
+            f += new Delegatefunc(s.ShowBoxes);
+            f += new Delegatefunc(s.ShowPlus);
+            f(4);
+
+            int[] a = { 0, 1, 2 };
+            //  配列の内容を表示
+            for (int i = 0; i < 4; i++)
             {
-                int i = r.Next(0, 11);
-                if (i % 2 == 0)
+                try
                 {
-                    n2.Add(i);
+                    Console.WriteLine("a[" + i + "]=" + a[i]);
                 }
-                else
+                catch(IndexOutOfRangeException e)
                 {
-                    n.Add(i);
+                    Console.WriteLine("配列の範囲を超えています。");
                 }
-                Console.WriteLine("0～10の値を出力:{0}", i);
-                if (i == 0)
-                {
-                    Console.Write("偶数:");
-                    int index = 1;
-                    foreach(int s in n2)
-                    {
-                        if (index == n2.Count)
-                        {
-                            Console.WriteLine(s);
-                        }
-                        else
-                        {
-                            Console.Write(s);
-                        }
-                        
-                    }
-                    break;
-                }
+    
             }
         }
     }
