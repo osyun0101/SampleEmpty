@@ -59,6 +59,10 @@ namespace SampleEmptyApp
                 {
                     Console.WriteLine("配列の範囲を超えています。");
                 }
+                finally
+                {
+                    Console.WriteLine("nekp");
+                }
     
             }
         }
