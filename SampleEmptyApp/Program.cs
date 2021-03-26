@@ -21,8 +21,7 @@ namespace SampleEmptyApp
         .ConfigureWebHostDefaults(webBuilder =>
         {
             webBuilder.UseStartup<Startup>();
-        }
-        );
+        });
     }
         
 }
