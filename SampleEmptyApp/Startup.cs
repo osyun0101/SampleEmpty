@@ -36,6 +36,7 @@ namespace SampleEmptyApp
                     await context.Response.WriteAsync("<html><title>Hello</title></head>");
                     await context.Response.WriteAsync("<body><h1>Hello!</h1>");
                     await context.Response.WriteAsync("<p>This is sample page.</p>");
+                    await context.Response.WriteAsync("<p>neko</p>");
                     await context.Response.WriteAsync("</body></html>");
                 });
             });
