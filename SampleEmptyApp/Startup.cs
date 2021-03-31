@@ -39,6 +39,7 @@ namespace SampleEmptyApp
                     await context.Response.WriteAsync("<p>neko</p>");
                     await context.Response.WriteAsync("<p>犬</p>");
                     await context.Response.WriteAsync("<p>鈴木</p>");
+                    await context.Response.WriteAsync("<p>洵輔</p>");
                     await context.Response.WriteAsync("</body></html>");
                 });
             });
