@@ -1,16 +1,14 @@
 ﻿<Properties StartupConfiguration="{969D9662-CB41-4913-BBD2-B9108BCDE92F}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="SampleEmptyApp/Startup.cs">
     <Files>
-      <File FileName="SampleEmptyApp/Program.cs" Line="17" Column="51" />
-      <File FileName="SampleEmptyApp/Startup.cs" Line="1" Column="1" />
+      <File FileName="SampleEmptyApp/Program.cs" Line="23" Column="46" />
+      <File FileName="SampleEmptyApp/Startup.cs" Line="42" Column="61" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SampleEmptyApp" expanded="True">
-            <Node name="SampleEmptyApp" expanded="True">
-              <Node name="Startup.cs" selected="True" />
-            </Node>
+          <Node name="SampleEmptyApp" expanded="True" selected="True">
+            <Node name="SampleEmptyApp" expanded="True" />
           </Node>
         </State>
       </Pad>
